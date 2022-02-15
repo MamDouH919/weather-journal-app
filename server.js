@@ -19,12 +19,14 @@ app.use(express.static('website'));
 const port = 3001;
 
 // TODO-Spin up the server
-const server = app.listen(port, listening);
+app.post('/api', (req, res) => {
+    let { date, cityName, temp, content } = req.body;
+    projectData = { date, cityName, temp, content };
+    res.send(projectData);
+  });
+  
+  // Setup Server
+  const server = app.listen(port, listening);
 function listening(){
-    // console.log(server);
     console.log(`running on localhost: ${port}`);
 };
-
-// Setup Server
-
-

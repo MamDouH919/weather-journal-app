@@ -5,9 +5,9 @@ body{
 
 #app{
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
+    grid-auto-rows: minmax(50px, auto);
     /* grid-template-columns:  */
-    height:100vh;
+    /* height:100vh; */
     background: #f23557;
     color: #f0d43a;
     justify-content: center;
@@ -17,7 +17,6 @@ body{
 }
 
 .holder{
-
 }
 
 .entry{
@@ -25,7 +24,7 @@ body{
 }
 
 #entryHolder{
-
+    text-align: center;
 }
 
 #date{
@@ -65,7 +64,7 @@ input{
 }
 
 button{
-    width: 400px;
+    width: 250px;
     height: 100px;
     background: #3b4a6b;
     color: #f0d43a;
@@ -83,6 +82,8 @@ textarea{
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+    /* max-width: 60%;
+    max-height: 110px; */
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
