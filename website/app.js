@@ -58,7 +58,18 @@ const postData = async (url = '', newData = {}) => {
     return false;
   }
 };
-
+/* Function to GET Project Data */
+const retrieveData = async () =>{
+  const request = await fetch('/all');
+  try {
+  // Transform into JSON
+  const allData = await request.json()
+  console.log(allData) }
+  catch(error) {
+  console.log("error", error);
+  // appropriately handle the error
+  }
+  }
 // Add the data to the Page (Update UI)
 const updateUI = (data) => {
   document.getElementById('date').innerHTML=`Today is ${data.date}`;

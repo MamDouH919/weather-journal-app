@@ -24,9 +24,17 @@ app.post('/api', (req, res) => {
     projectData = { date, cityName, temp, content };
     res.send(projectData);
   });
-  
+  // Initialize all route with a callback function
+app.get('/all', sendData)
+
+// Callback function to complete GET '/all'
+function sendData (req, res) {
+ // res.send('Green')
+ res.send(projectData)
+}
   // Setup Server
   const server = app.listen(port, listening);
 function listening(){
     console.log(`running on localhost: ${port}`);
 };
+
